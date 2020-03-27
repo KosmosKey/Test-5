@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Creating a JavaScript Object.</p>
+    <button id="person1">Show person 1 object</button>
+    <button id="person2">Show person 2 object</button>
+    <button id="person3">Show person 3 object</button>
+    <button id="ageOne">Person age 1</button>
+    <button id="ageTwo">Person age 2</button>
+    <button id="ageThree">Person age 3</button>
+    <button id="arrayAmount">Amount of age of every single array</button>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="agePerson1"></p>
+    <p id="agePerson2"></p>
+    <p id="agePerson3"></p>
+    <p id="total"></p>
+    <script>
+      const paragraphShow = document.getElementById("demo");
+      const buttonShow = document.getElementById("person1");
+      const buttonShowTwo = document.getElementById("person2");
+      const buttonShowThree = document.getElementById("person3");
+      const paragraphOne = document.getElementById("demo2");
+      const paragraphTwo = document.getElementById("demo3");
+      const arrayTotal = document.getElementById("arrayAmount");
+      const totalParagraph = document.getElementById("total");
+      const ageOne = document.getElementById("agePerson1");
+      const ageTwo = document.getElementById("agePerson1");
+      const ageThree = document.getElementById("agePerson1");
+      const buttonOne = document.getElementById("ageOne");
+      const buttonTwo = document.getElementById("ageTwo");
+      const buttonThree = document.getElementById("ageThree");
+
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue"
+      };
+
+      const person2 = {
+        firstName: "Mia",
+        lastName: "Johnson",
+        age: 40,
+        eyeColor: "red"
+      };
+
+      const person3 = {
+        firstName: "Alex",
+        lastName: "Smith",
+        age: 35,
+        eyeColor: "Yellow"
+      };
+
+      buttonOne.addEventListener("click", function() {
+        ageOne.innerHTML = person.age + " years old.";
+      });
+
+      buttonTwo.addEventListener("click", function() {
+        ageTwo.innerHTML = person2.age + " years old.";
+      });
+      buttonThree.addEventListener("click", function() {
+        ageThree.innerHTML = person3.age + " years old.";
+      });
+
+      buttonShow.addEventListener("click", function() {
+        paragraphShow.innerHTML =
+          person.firstName + " is " + person.age + " years old.";
+      });
+
+      buttonShowTwo.addEventListener("click", function() {
+        paragraphOne.innerHTML =
+          person2.firstName + " is " + person2.age + " years old.";
+      });
+
+      buttonShowThree.addEventListener("click", function() {
+        paragraphTwo.innerHTML =
+          person3.firstName + " is " + person3.age + " years old.";
+      });
+
+      arrayTotal.addEventListener("click", function() {
+        totalParagraph.innerHTML =
+          person3.age + person.age + person2.age + " Age of everyone in total";
+      });
+    </script>
+  </body>
+</html>
